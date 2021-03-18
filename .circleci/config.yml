@@ -1,0 +1,13 @@
+version: 2.1 # CircleCI version
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.7.0
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: npm install
+      - run: yarn install
+      - run: npm run build
