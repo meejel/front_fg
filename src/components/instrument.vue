@@ -774,7 +774,7 @@ export default {
         console.log(newInstrument);
         this.$axios
           .put(
-            "https://meejel-back.herokuapp.com/api/v1/instrument/" +
+            "https://back-meejel.herokuapp.com/api/v1/instrument/" +
               this.$route.params.id +
               "/",
             newInstrument,
@@ -799,7 +799,7 @@ export default {
         console.log(newInstrument)
         this.$axios
           .post(
-            "https://meejel-back.herokuapp.com/api/v1/instrument/",
+            "https://back-meejel.herokuapp.com/api/v1/instrument/",
             newInstrument,
             { headers: { Authorization: "Bearer " + this.token } }
           )
@@ -852,7 +852,7 @@ export default {
       let tkn = this.token;
       this.$axios
         .get(
-          "https://meejel-back.herokuapp.com/api/v1/instrument/" +
+          "https://back-meejel.herokuapp.com/api/v1/instrument/" +
             this.$route.params.id,
           { headers: { Authorization: "Bearer " + tkn } }
         )
@@ -923,7 +923,7 @@ export default {
       let self = this;
       let tkn = self.token;
       self.$axios
-        .get("https://meejel-back.herokuapp.com/api/v1/category/", {
+        .get("https://back-meejel.herokuapp.com/api/v1/category/", {
           headers: { Authorization: "Bearer " + tkn }
         })
         .then(res => {
@@ -943,7 +943,7 @@ export default {
     makeCategory() {
       this.$axios
         .post(
-          "https://meejel-back.herokuapp.com/api/v1/category/",
+          "https://back-meejel.herokuapp.com/api/v1/category/",
           { name: this.newCateg },
           { headers: { Authorization: "Bearer " + this.token } }
         )

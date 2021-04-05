@@ -71,7 +71,7 @@ export default {
         username: this.username,
         password: this.password
       }
-      this.$axios.post('https://meejel-back.herokuapp.com/api/v1/api-token-auth/', login)
+      this.$axios.post('https://back-meejel.herokuapp.com/api/v1/api-token-auth/', login)
         .then(res => {
           console.log('in')
           this.token = res.data.token
