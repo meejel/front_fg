@@ -131,7 +131,7 @@ export default {
       this.axiosInstruments()
     },
     axiosInstruments () {
-      this.$axios.get('https://back-meejel.herokuapp.com/api/v1/instrument/', { headers: { Authorization: 'Bearer ' + this.token } })
+      this.$axios.get('https://back-fg.onrender.com/api/v1/instrument/', { headers: { Authorization: 'Bearer ' + this.token } })
         .then(res => {
           this.items = res.data
         })
@@ -140,7 +140,7 @@ export default {
         })
     },
     async mounter (item) {
-      let prom = await this.$axios.get('https://back-meejel.herokuapp.com/api/v1/instrument/' + item.id + '/principle/', { headers: { Authorization: 'Bearer ' + this.token } })
+      let prom = await this.$axios.get('https://back-fg.onrender.com/api/v1/instrument/' + item.id + '/principle/', { headers: { Authorization: 'Bearer ' + this.token } })
       this.details = prom.data
       this.instrumentName = item.name
       let final = this.details.filter(element => element.weight > 0)

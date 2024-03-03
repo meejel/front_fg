@@ -474,7 +474,7 @@ export default {
     },
     getInstruments () {
       let tkn = this.token
-      this.$axios.get('https://back-meejel.herokuapp.com/api/v1/instrument/', { headers: { Authorization: 'Bearer ' + tkn } })
+      this.$axios.get('https://back-fg.onrender.com/api/v1/instrument/', { headers: { Authorization: 'Bearer ' + tkn } })
         .then(res => {
           this.instruments = res.data
         })
@@ -810,7 +810,7 @@ export default {
     },
     guardar () {
       let id = this.makeOptions()[this.model]
-      this.$axios.post('https://back-meejel.herokuapp.com/api/v1/instrument/' + id + '/evidence/',
+      this.$axios.post('https://back-fg.onrender.com/api/v1/instrument/' + id + '/evidence/',
         this.newEvaluation, { headers: { Authorization: 'Bearer ' + this.token } })
       this.dialogGrade = false
     }

@@ -126,7 +126,7 @@ export default {
     },
     axiosInstruments () {
       let tkn = this.token
-      this.$axios.get('https://back-meejel.herokuapp.com/api/v1/instrument/', { headers: { Authorization: 'Bearer ' + tkn } })
+      this.$axios.get('https://back-fg.onrender.com/api/v1/instrument/', { headers: { Authorization: 'Bearer ' + tkn } })
         .then(res => {
           this.items = res.data
         })
